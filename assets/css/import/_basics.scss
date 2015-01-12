@@ -1,0 +1,46 @@
+.btn-sm {border:none;font-size: 16px;font-weight:300;padding: 10px 20px;border-radius: 4px;}
+.btn-default { background-color: $blue-light;color:white;}
+.btn-default:hover {background-color: $blue-dark; color:white;}
+
+.btn-primary {background-color: #FFF; color:$blue-light;}
+.btn-primary:hover {background-color: $grey-light;}
+.error {color: red;margin-bottom: 10px;background-color: #FFCCBA;padding: 5px;border: 1px solid red;}
+
+hr {width: 60%;}
+
+section.button {text-align: center;} 
+section.blue {
+  a {color:#FFF;text-decoration:underline;font-weight:300;}
+  a:hover {text-decoration:none;color:$grey-light;}
+  .btn-primary {color:$blue-light;text-decoration:none;}
+  .btn-primary:hover {color:$blue-light;}
+  background-color: $blue-light; color:#FFF; 
+}
+section.textblock {
+  //a {color:#FFF;}
+  //a:hover {text-decoration:none; color:#}
+}
+
+h1 {font-weight:300;line-height: 1.15em;font-size: 25px;}
+@media (min-width: 768px) {
+  h1 {font-size:30px;} 
+}
+
+
+h2 {font-size: 18px;font-weight:500;}
+p {font-weight: 300;}
+
+//FORM
+.form-control {border-radius:0px;border:none;height: 40px;}
+form .form-group label {font-weight:300;}
+
+.quote {font-style: italic;font-size: 16px;}
+.quote:before {
+  font-family: Georgia;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.4em;
+}
+
