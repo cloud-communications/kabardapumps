@@ -19,19 +19,19 @@
 							<a href="/"><?php echo lang('nav.item.home'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo lang('nav.item.url.products'); ?>"><?php echo lang('nav.item.products'); ?></a>
+							<a href="/<?php echo lang('nav.item.url.products'); ?>"><?php echo lang('nav.item.products'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo lang('nav.item.url.dealers'); ?>"><?php echo lang('nav.item.dealers'); ?></a>
+							<a href="/<?php echo lang('nav.item.url.dealers'); ?>"><?php echo lang('nav.item.dealers'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo lang('nav.item.url.about'); ?>"><?php echo lang('nav.item.about'); ?></a>
+							<a href="/<?php echo lang('nav.item.url.about'); ?>"><?php echo lang('nav.item.about'); ?></a>
 						</li>
 						<li>
 							<a href="<?php echo lang('nav.item.url.news'); ?>"><?php echo lang('nav.item.news'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo lang('nav.item.url.contact'); ?>"><?php echo lang('nav.item.contact'); ?></a>
+							<a href="/<?php echo lang('nav.item.url.contact'); ?>"><?php echo lang('nav.item.contact'); ?></a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">

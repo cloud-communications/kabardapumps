@@ -30,7 +30,8 @@ class News extends CI_Controller {
 		$this->lang->load('front');
 		$data['secondary_footer'] = false; 
 		//$data['language_code'] = $this->lang->lang();
-	 	
+		$newsItems = $this -> frontend_model -> get_newsItems();
+		$data['newsItems'] = $newsItems; 
 		
 		$this->load->view('news', $data);
 	}
@@ -41,8 +42,21 @@ class News extends CI_Controller {
 		$data['secondary_footer'] = true; 
 		//$data['language_code'] = $this->lang->lang();
 	 	
+	 	$newsUrl = $this -> uri -> segment(3);
+	 	$newsItem = $this -> frontend_model -> get_newsItems_by_url($newsUrl);
 		
-		$this->load->view('news_detail', $data);
+		if( !empty( $newsItem ) )
+		{
+		 	$data['title'] = $newsItem['title'];
+			$data['date'] = $newsItem['date'];
+			$data['intro'] = $newsItem['intro'];
+			$data['text'] = $newsItem['text'];
+			
+			$this->load->view('news_detail', $data);
+		
+		}else {
+			show_404();
+		}
 	}
 	
 	

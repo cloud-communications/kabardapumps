@@ -17,6 +17,16 @@ class frontend_model Extends CI_Model {
 		$this->db->insert('contact_form', $data); 
 	}
 	
+	function get_newsItems(){
+		$this->db->from('news');
+		return $this->db->get_where()->result_array();
+	}
+	
+	function get_newsItems_by_url($url){
+		$this->db->from('news');
+		$this->db->where('url', $url);
+		return $this->db->get_where()->row_array();
+	}
 	
 	
 	

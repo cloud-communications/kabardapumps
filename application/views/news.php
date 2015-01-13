@@ -26,92 +26,37 @@
 				<div class="row">
 				  		<div class="col-md-12">
 							<section class="newsList">
+								
+								<?php foreach($newsItems as $newsItem){ ?>
+								
 						  		<article class="newsItem">
 						  			
 						  				<div class="image">
-											<img src="/assets/images//news/news_image.jpg" alt="">
+											<img src="/assets/images/news/<?php echo $newsItem["thumb"] ?>" alt="">
 										</div>
 										<div class="newsDetail">
 											<header>
-												<h1>Drie doden en miljoenen Filipijnen zonder stroom</h1>
+												<h1><?php echo $newsItem["title"] ?></h1>
 											</header>
 											<section class="textblock">
-												<p>December 7, 2014</p>
+												<p><?php echo $newsItem["date"] ?></p>
 											</section>
 											
 											
 											<section class="textblock">
-												<p>De krachtige tyfoon Hagupit heeft minstens drie dodelijke slachtoffers gemaakt op de Filipijnen. De tyfoon kwam zaterdag aan land en sneed miljoenen Filipijnen af van elektriciteit.
-Hagupit kwam zaterdagavond aan land in de provincie Eastern Samar en omstreken. De tyfoon blies bomen omver en daken weg. Een 75-jarige vrouw verdronk in Catarman, in de buurt van de regio waar...</p>
+												<p><?php echo $newsItem["excerpt"] ?></p>
 											</section>
 											<footer>
-									  			<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
+									  			<a class="btn btn-sm btn-default" href="/en/news/<?php echo $newsItem["url"] ?>" role="button">Read more</a>
 									  		</footer>
 									  		<hr></hr>
 											
 										</div>
 						  		</article>
 						  		
+						  		<?php } ?>
 						  		
 						  		
-						  		<article class="newsItem">
-						  			
-						  				<div class="image">
-											<img src="/assets/images//news/news_image.jpg" alt="">
-										</div>
-										<div class="newsDetail">
-											<header>
-												<h1>Drie doden en miljoenen Filipijnen zonder stroom</h1>
-											</header>
-											<section class="textblock">
-												<p>December 7, 2014</p>
-											</section>
-											
-											
-											<section class="textblock">
-												<p>De krachtige tyfoon Hagupit heeft minstens drie dodelijke slachtoffers gemaakt op de Filipijnen. De tyfoon kwam zaterdag aan land en sneed miljoenen Filipijnen af van elektriciteit.
-Hagupit kwam zaterdagavond aan land in de provincie Eastern Samar en omstreken. De tyfoon blies bomen omver en daken weg. Een 75-jarige vrouw verdronk in Catarman, in de buurt van de regio waar...</p>
-											</section>
-											<footer>
-									  			<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-									  		</footer>
-									  		<hr></hr>
-											
-										</div>
-										
-						  				
-						  			
-						  		</article>
-						  		
-						  		
-						  		<article class="newsItem">
-						  			
-						  				<div class="image">
-											<img src="/assets/images//news/news_image.jpg" alt="">
-										</div>
-										<div class="newsDetail">
-											<header>
-												<h1>Drie doden en miljoenen Filipijnen zonder stroom</h1>
-											</header>
-											<section class="textblock">
-												<p>December 7, 2014</p>
-											</section>
-											
-											
-											<section class="textblock">
-												<p>De krachtige tyfoon Hagupit heeft minstens drie dodelijke slachtoffers gemaakt op de Filipijnen. De tyfoon kwam zaterdag aan land en sneed miljoenen Filipijnen af van elektriciteit.
-Hagupit kwam zaterdagavond aan land in de provincie Eastern Samar en omstreken. De tyfoon blies bomen omver en daken weg. Een 75-jarige vrouw verdronk in Catarman, in de buurt van de regio waar...</p>
-											</section>
-											<footer>
-									  			<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-									  		</footer>
-									  		<hr></hr>
-											
-										</div>
-										
-						  				
-						  			
-						  		</article>
 						  		
 					
 							
