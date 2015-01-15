@@ -574,19 +574,21 @@ header .textblock.intro {
 @media (min-width: 992px) {
   header .textblock.intro {
     padding: 0 25%; } }
-#products header .focus {
-  background-image: url("http://www2.shutterstock.com/webstack/img/lohp/hero/hero-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: rgba(0, 0, 0, 0.05);
-  max-height: 280px; }
-#products header .focus:before {
-  content: "";
-  display: block;
-  padding-top: 40%;
-  width: 0;
-  float: left; }
+#products header {
+  margin-bottom: 25px; }
+  #products header .focus {
+    background-image: url("http://www2.shutterstock.com/webstack/img/lohp/hero/hero-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.05);
+    max-height: 280px; }
+  #products header .focus:before {
+    content: "";
+    display: block;
+    padding-top: 40%;
+    width: 0;
+    float: left; }
 
 #products .filter {
   border-bottom: 1px solid #e7e7e7;
@@ -845,7 +847,8 @@ section#sec-footer {
         text-decoration: none; }
       section#sec-footer .newsList .newsItem .image img {
         border-radius: 50%;
-        float: left; }
+        float: left;
+        width: 85px; }
       section#sec-footer .newsList .newsItem .newsDetail {
         padding-left: 100px; }
       section#sec-footer .newsList .newsItem .more {

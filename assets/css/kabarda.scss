@@ -64,6 +64,7 @@ header .textblock.intro {text-align:center;font-size:17px;}
       background-image:url('http://www2.shutterstock.com/webstack/img/lohp/hero/hero-2.jpg');background-size: cover;background-repeat: no-repeat;background-position: center center;background-color: rgba(0, 0, 0, 0.05);
       max-height: 280px;}
     .focus:before {content: "";display: block;padding-top: 40%;width: 0;float: left;}
+    margin-bottom: 25px;
 }
 #products {
   .filter {
@@ -237,7 +238,7 @@ section#sec-footer {
       padding-bottom: 10px;text-align:left;
       a {text-decoration:none;}
       h2 {}
-      .image img {border-radius: 50%; float:left;}
+      .image img {border-radius: 50%; float:left;width: 85px;}
       .newsDetail {padding-left: 100px;}
       .more {font-weight: 400; text-decoration: underline;}
       

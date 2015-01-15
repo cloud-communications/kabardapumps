@@ -21,158 +21,63 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				
-				<div class="row">
-			  		<div class="col-md-12">
-			  			<header>
-			  				<h1>SIP RANGE</h1>
-			  				<section class="textblock intro">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum sed felis in vehicula. Mauris et tempus ipsum. </p>
-							</section>
-			  			</header>
-			  		</div>
-				</div>
-				</div>	
+			
 		</header>
-		<section class="products block">
-			<div class="container">
-				<div class="row">
-				  		<div class="col-md-4">
+		<section class="products">
+			<?php foreach($products as $productCategory){ ?>
+				<div class="container">
+					<header>
+						<div class="row">
+				  		<div class="col-md-12">
+				  			<header>
+				  				<h1><?php echo $productCategory["name"] ?></h1>
+				  				<section class="textblock intro">
+									<p><?php echo $productCategory["intro"] ?></p>
+								</section>
+				  			</header>
+				  		</div>
+					</div>
+					</header>
+				
+					<div class="row">
+					<?php
+						$i = 0;
+						foreach($productCategory[0] as $products) {
+							if ($i % 3 === 0) {
+								echo '</div><div class="row">';
+							}
+							$i++
+						 ?>
+						 <div class="col-md-4">
 				  			<article class="productItem">
 				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
+									<img src="/assets/images/<?php echo $products["image"] ?>" class="img-responsive" alt="pomp">
 								</div>
 								<header>
-									<h2>SuperHawk 75-3</h2>
+									<h2><?php echo $products["name"] ?></h2>
 								</header>
 								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
+									<p><?php echo $products["excerpt"] ?></p>
+									<a class="btn btn-sm btn-default" href="<?php echo $GLOBALS['language-abbr'] . "/" . lang('nav.item.url.products') . "/"?><?php echo $products["url"] ?>" role="button">Read more</a>
 								</section>
 				  			</article>
 						
 						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
-				</div>
-				<div class="row">
-				  		<div class="col-md-4">
-				  			<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
 						
-						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
+					
+					
+					
+					
+					<?php } ?>
+					</div>
+				
 				</div>
-				<div class="row">
-				  		<div class="col-md-4">
-				  			<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						
-						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
-						<div class="col-md-4">
-							<article class="productItem">
-				  				<div class="image">
-									<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-								</div>
-								<header>
-									<h2>SuperHawk 75-3</h2>
-								</header>
-								<section class="textblock">
-									<p>The compact model in the SuperHawk range delivers impressive pumping performance that outclasses competitors in key criteria such as fuel consumption, maximum running time and solids free passage.</p>
-									<a class="btn btn-sm btn-default" href="#" role="button">Read more</a>
-								</section>
-				  			</article>
-						</div>
-				</div>
-			</div>
+				
+				
+			<?php } ?>
+			
+			
+		
 		</section>
 		
 		

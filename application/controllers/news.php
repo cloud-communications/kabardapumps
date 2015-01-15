@@ -20,8 +20,6 @@ class News extends CI_Controller {
 	 function News() {
 	 	parent::__construct();
 		$this -> load -> database();
-		$this -> load -> helper(array('url', 'form', 'date', 'cookie'));
-		$this -> load -> library('email');
 		
 	 }
 	 
@@ -29,9 +27,13 @@ class News extends CI_Controller {
 	{
 		$this->lang->load('front');
 		$data['secondary_footer'] = false; 
-		//$data['language_code'] = $this->lang->lang();
+		
+		//echo "dddd" . get_lang();
+		
 		$newsItems = $this -> frontend_model -> get_newsItems();
 		$data['newsItems'] = $newsItems; 
+		
+		
 		
 		$this->load->view('news', $data);
 	}
@@ -40,6 +42,8 @@ class News extends CI_Controller {
 	{
 		$this->lang->load('front');
 		$data['secondary_footer'] = true; 
+		$data['footer_news'] = get_latestNewsItems(2);
+		
 		//$data['language_code'] = $this->lang->lang();
 	 	
 	 	$newsUrl = $this -> uri -> segment(3);

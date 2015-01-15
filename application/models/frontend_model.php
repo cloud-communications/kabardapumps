@@ -21,6 +21,45 @@ class frontend_model Extends CI_Model {
 		$this->db->from('news');
 		return $this->db->get_where()->result_array();
 	}
+	function get_latestNewsItems($val){
+		$this->db->from('news');
+		$this->db->order_by("id", "desc");
+		$this->db->limit($val);
+		return $this->db->get_where()->result_array();
+	}
+	
+	function get_languages(){
+		$this->db->select('abbr');
+		$this->db->from('languages');
+		return $this->db->get_where()->result_array();
+	}
+	
+	function get_categories_by_lang($lang){
+		$this->db->from('product_category');
+		$this->db->where('lang', $lang);
+		return $this->db->get_where()->result_array();
+	}
+	
+	
+	function get_product_overview($lang){
+		$SQL = "SELECT * FROM product_category where lang='" . $lang . "'";	
+		$answers = $this->db->query($SQL)->result_array();	
+		
+		$product_overview = array();
+		
+		foreach ($answers as $value) {
+			$catArray = array();
+			$catId = $value['id'];	
+			$product_SQL = "SELECT * FROM products where lang='" . $lang . "' AND categoryId=" . $catId;	
+			$product_result = $this->db->query($product_SQL)->result_array();	
+			
+			array_push($value,$product_result);
+			array_push($product_overview,$value);
+					
+		}
+		return $product_overview;
+	}
+	
 	
 	function get_newsItems_by_url($url){
 		$this->db->from('news');

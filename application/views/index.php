@@ -94,7 +94,7 @@ the SuperHawk range by Hidrostal offers market leading </p>
 			  					<h2>Screw Impeller Pumps</h2>
 			  			 	</header>
 			  			 	<ul class="list-unstyled rangeCollector">
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
+			  			 		<li class="active"><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
 			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
 			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
 			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>

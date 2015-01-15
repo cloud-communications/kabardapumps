@@ -20,8 +20,6 @@ class Products extends CI_Controller {
 	 function Products() {
 	 	parent::__construct();
 		$this -> load -> database();
-		$this -> load -> helper(array('url', 'form', 'date', 'cookie'));
-		$this -> load -> library('email');
 		
 	 }
 	 
@@ -29,7 +27,13 @@ class Products extends CI_Controller {
 	{
 		$this->lang->load('front');
 		$data['secondary_footer'] = true; 
+		$data['footer_news'] = get_latestNewsItems(2);
 		//$data['language_code'] = $this->lang->lang();
+		//$product_categories = $this -> frontend_model -> get_categories_by_lang($GLOBALS['language-abbr']);
+		//$data['product_categories'] = $product_categories;
+		
+		$products = $this -> frontend_model -> get_product_overview($GLOBALS['language-abbr']);
+		$data['products'] = $products;
 	 	
 		
 		$this->load->view('products', $data);

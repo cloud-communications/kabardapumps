@@ -9,29 +9,31 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"> <img src="/assets/images/logo_kabarda.png" alt="Logo Kabarda pumps"> </a>
+					<a class="navbar-brand" href="/<?php echo $GLOBALS['language-abbr'];?>"> 
+						<img src="/assets/images/logo_kabarda.png" alt="Logo Kabarda pumps"> 
+					</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 
 					
 					<ul class="nav navbar-nav navbar-main">
 						<li class="active">
-							<a href="/"><?php echo lang('nav.item.home'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>"><?php echo lang('nav.item.home'); ?></a>
 						</li>
 						<li>
-							<a href="/<?php echo lang('nav.item.url.products'); ?>"><?php echo lang('nav.item.products'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.products'); ?>"><?php echo lang('nav.item.products'); ?></a>
 						</li>
 						<li>
-							<a href="/<?php echo lang('nav.item.url.dealers'); ?>"><?php echo lang('nav.item.dealers'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.dealers'); ?>"><?php echo lang('nav.item.dealers'); ?></a>
 						</li>
 						<li>
-							<a href="/<?php echo lang('nav.item.url.about'); ?>"><?php echo lang('nav.item.about'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.about'); ?>"><?php echo lang('nav.item.about'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo lang('nav.item.url.news'); ?>"><?php echo lang('nav.item.news'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.news'); ?>"><?php echo lang('nav.item.news'); ?></a>
 						</li>
 						<li>
-							<a href="/<?php echo lang('nav.item.url.contact'); ?>"><?php echo lang('nav.item.contact'); ?></a>
+							<a href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.contact'); ?>"><?php echo lang('nav.item.contact'); ?></a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -40,10 +42,10 @@
 						</li>
 						<li id="social-icons">
 						
-							<a href="../navbar-static-top/"><span class="pe-so-facebook"></span></a>
-							<a href="../navbar-static-top/"><span class="pe-so-linkedin"></span></a>
-							<a href="../navbar-static-top/"><span class="pe-so-youtube-1"></span></a>
-							<a href="../navbar-static-top/"><span class="pe-so-picasa"></span></a>
+							<a href="<?php echo lang('g.facebook'); ?>" target="_blank"><span class="pe-so-facebook"></span></a>
+							<a href="<?php echo lang('g.linkedIn'); ?>" target="_blank"><span class="pe-so-linkedin"></span></a>
+							<a href="<?php echo lang('g.youtube'); ?>" target="_blank"><span class="pe-so-youtube-1"></span></a>
+							<a href="<?php echo lang('g.picasa'); ?>" target="_blank"><span class="pe-so-picasa"></span></a>
 							
 						</li>
 						<li>

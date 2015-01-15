@@ -9,40 +9,31 @@
 						<h1>News</h1>
 					</header>
 					<section class="newsList">
+						
+						
+						
+						<?php foreach($footer_news as $newsItem){ ?>
+						
+						
 						<article class="newsItem">
-							<a href="#">
+							<a href="/<?php echo $GLOBALS['language-abbr']; ?>/news/<?php echo $newsItem["url"] ?>">
 							<div class="image">
-								<img src="/assets/images/news/news_thumb.jpg" alt="News image Volksopera">
+								<img src="/assets/images/news/<?php echo $newsItem["thumb"] ?>" alt="<?php echo $newsItem["title"] ?>">
 							</div>
 							<div class="newsDetail">
 								<header>
-									<h2>This is a newstitle</h2>
+									<h2><?php echo $newsItem["title"] ?></h2>
 								</header>
 								<section class="textblock">
 									<p>
-										With fuel savings of up to £696 per week, the SuperHawk range by Hidrostal offers market leading... <span class="more">Read more ></span>
+										<?php echo substr($newsItem["excerpt"],0,120) . "..."; ?> <span class="more">Read more ></span>
 									</p>
 								</section>
 
 							</div> </a>
 						</article>
-						<article class="newsItem">
-							<a href="#">
-							<div class="image">
-								<img src="/assets/images/news/news_thumb.jpg" alt="News image Volksopera">
-							</div>
-							<div class="newsDetail">
-								<header>
-									<h2>This is a newstitle</h2>
-								</header>
-								<section class="textblock">
-									<p>
-										With fuel savings of up to £696 per week, the SuperHawk range by Hidrostal offers market leading... <span class="more">Read more ></span>
-									</p>
-								</section>
-
-							</div> </a>
-						</article>
+						
+						<?php } ?>
 
 					</section>
 					<footer>

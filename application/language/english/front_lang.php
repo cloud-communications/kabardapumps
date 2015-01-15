@@ -1,17 +1,23 @@
 <?php
 
+//GENERAL
+$lang['g.facebook'] = "http://www.facebook.com";
+$lang['g.linkedIn'] = "http://www.facebook.com";
+$lang['g.youtube'] = "http://www.facebook.com";
+$lang['g.picasa'] = "http://www.facebook.com";
+
 //main nav
 $lang['nav.toggle'] = "Toggle navigation";
-$lang['nav.item.home'] = "home";
-$lang['nav.item.products'] = "products";
+$lang['nav.item.home'] = "Home";
+$lang['nav.item.products'] = "Products";
 $lang['nav.item.url.products'] = "products";
-$lang['nav.item.dealers'] = "dealers";
+$lang['nav.item.dealers'] = "Dealers";
 $lang['nav.item.url.dealers'] = "dealers";
-$lang['nav.item.about'] = "about";
+$lang['nav.item.about'] = "About";
 $lang['nav.item.url.about'] = "about";
-$lang['nav.item.news'] = "news";
+$lang['nav.item.news'] = "News";
 $lang['nav.item.url.news'] = "news";
-$lang['nav.item.contact'] = "contact";
+$lang['nav.item.contact'] = "Contact";
 $lang['nav.item.url.contact'] = "contact";
 $lang['nav.sub.phone'] = "+32 (0)3 322 32 32";
 

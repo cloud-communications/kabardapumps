@@ -42,10 +42,11 @@ $route['default_controller'] = "welcome";
 
 $route['^en/news/(.+)$'] = "news/detail/$1";
 
-$route['^en/(.+)$'] = "$1";
+//$route['^(en|de|fr|nl)/(.+)$'] = "$2";
+//$route['^(en|de|fr|nl)$'] = $route['default_controller'];
 
-$route['^en$'] = $route['default_controller'];
-$route['^en$'] = $route['default_controller'];
+$route['^(en)/(.+)$'] = "$2";
+$route['^(en)$'] = $route['default_controller'];
 
 $route['404_override'] = '';
 

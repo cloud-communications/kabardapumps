@@ -20,8 +20,7 @@ class Contact extends CI_Controller {
 	 function __construct() {
 	 	parent::__construct();
 		$this -> load -> database();
-		$this -> load -> helper(array('url', 'form', 'date', 'cookie'));
-		$this -> load -> library(array('email','form_validation'));
+		$this -> load -> library(array('form_validation'));
 	 }
 	 
 	public function index()
@@ -55,6 +54,7 @@ class Contact extends CI_Controller {
 				
 				$this->lang->load('front');
 				$data['secondary_footer'] = true; 
+				$data['footer_news'] = get_latestNewsItems(2);
 				$data['language_code'] = "en";
 		 	
 				$this->load->view('contact', $data);
@@ -82,6 +82,7 @@ class Contact extends CI_Controller {
 				
 				$this->lang->load('front');
 				$data['secondary_footer'] = true; 
+				$data['footer_news'] = get_latestNewsItems(2);
 				$data['language_code'] = "en";
 				$this->load->view('formSuccess', $data);
 			}
@@ -93,6 +94,7 @@ class Contact extends CI_Controller {
 		}else {
 			$this->lang->load('front');
 			$data['secondary_footer'] = true; 
+			$data['footer_news'] = get_latestNewsItems(2);
 			$data['language_code'] = "en";
 	 	
 		

@@ -20,8 +20,6 @@ class Welcome extends CI_Controller {
 	 function Welcome() {
 	 	parent::__construct();
 		$this -> load -> database();
-		$this -> load -> helper(array('url', 'form', 'date', 'cookie'));
-		$this -> load -> library('email');
 	 	
 	 }
 	 
@@ -29,6 +27,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->lang->load('front');
 		$data['secondary_footer'] = true;
+		$data['footer_news'] = get_latestNewsItems(2);
 		
 		$this->load->view('index', $data);
 	}
