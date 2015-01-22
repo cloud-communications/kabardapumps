@@ -13,7 +13,6 @@
 
 		<link rel="stylesheet" href="/assets/owl-carousel/owl.carousel.css"> 
 		<link rel="stylesheet" href="/assets/owl-carousel/owl.theme.css">
- 
 		<link href="/assets/css/kabarda.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

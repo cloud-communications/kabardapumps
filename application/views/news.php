@@ -47,7 +47,7 @@
 												<p><?php echo $newsItem["excerpt"] ?></p>
 											</section>
 											<footer>
-									  			<a class="btn btn-sm btn-default" href="/en/news/<?php echo $newsItem["url"] ?>" role="button">Read more</a>
+									  			<a class="btn btn-sm btn-default" href="/en/news/<?php echo $newsItem["url"] ?>" role="button"><?php echo lang('g.readmore'); ?></a>
 									  		</footer>
 									  		<hr></hr>
 											

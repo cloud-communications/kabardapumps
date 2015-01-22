@@ -48,6 +48,8 @@ $route['^en/news/(.+)$'] = "news/detail/$1";
 $route['^(en)/(.+)$'] = "$2";
 $route['^(en)$'] = $route['default_controller'];
 
+$route['json-dealers'] = "dealers/json";
+
 $route['404_override'] = '';
 
 

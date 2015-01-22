@@ -37,6 +37,7 @@ border-top: 1px solid #e7e7e7;}
 
 @import 'import/basics';
 @import 'import/nav';
+@import 'import/storelocator';
 @import 'import/pe-icon-social';
 
 header 
@@ -66,6 +67,35 @@ header .textblock.intro {text-align:center;font-size:17px;}
     .focus:before {content: "";display: block;padding-top: 40%;width: 0;float: left;}
     margin-bottom: 25px;
 }
+
+#dealers header 
+  {
+    .focus {
+      background-image:url('http://www2.shutterstock.com/webstack/img/lohp/hero/hero-2.jpg');background-size: cover;background-repeat: no-repeat;background-position: center center;background-color: rgba(0, 0, 0, 0.05);
+      max-height: 280px;}
+    .focus:before {content: "";display: block;padding-top: 40%;width: 0;float: left;}
+    margin-bottom: 25px;
+}
+#dealers {
+  section.dealers {padding:0;margin-bottom:25px;}
+  .filter {
+    border-bottom: 1px solid #e7e7e7;padding-bottom: 5px;
+    ul {
+      li {padding-left: 30px;}
+      li.reset {border-right:1px solid $grey-light;padding-right: 30px;padding-left:0;}
+      
+    }
+    color:#777;text-decoration:none;
+    a:hover, .active>a, .active>a:hover, .active>a:focus {color:$grey-dark;}
+  }
+}
+
+.filter {
+  .btn-primary{border-color: $grey-light; color: $grey-dark;border-radius: 0px;}
+  .btn-primary.active {background-color: $grey-light}
+  .btn.active {box-shadow:none;}
+}
+
 #products {
   .filter {
     border-bottom: 1px solid #e7e7e7;padding-bottom: 5px;

@@ -27,6 +27,10 @@ class frontend_model Extends CI_Model {
 		$this->db->limit($val);
 		return $this->db->get_where()->result_array();
 	}
+	function get_dealers(){
+		$this->db->from('locations');
+		return $this->db->get_where()->result_array();
+	}
 	
 	function get_languages(){
 		$this->db->select('abbr');
@@ -60,6 +64,12 @@ class frontend_model Extends CI_Model {
 		return $product_overview;
 	}
 	
+	function get_homepage_products($cat){
+		$this->db->from('products');
+		$this->db->where('show_homepage', 1);
+		$this->db->where('categoryId', $cat);
+		return $this->db->get_where()->result_array();
+	}
 	
 	function get_newsItems_by_url($url){
 		$this->db->from('news');

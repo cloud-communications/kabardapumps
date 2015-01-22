@@ -26,7 +26,7 @@
 								</header>
 								<section class="textblock">
 									<p>
-										<?php echo substr($newsItem["excerpt"],0,120) . "..."; ?> <span class="more">Read more ></span>
+										<?php echo substr($newsItem["excerpt"],0,120) . "..."; ?> <span class="more"><?php echo lang('g.readmore'); ?></span>
 									</p>
 								</section>
 
@@ -37,7 +37,7 @@
 
 					</section>
 					<footer>
-						<a class="btn btn-sm btn-primary" href="#" role="button">All news items</a>
+						<a class="btn btn-sm btn-primary" href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.news'); ?>" role="button">All news items</a>
 					</footer>
 				</div>
 				<div class="col-md-4 col kabarda">
@@ -90,7 +90,7 @@
 					</section>
 
 					<footer>
-						<a class="btn btn-sm btn-primary" href="#" role="button">To contact form</a>
+						<a class="btn btn-sm btn-primary" href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.contact'); ?>" role="button">To contact form</a>
 					</footer>
 				</div>
 			</div>

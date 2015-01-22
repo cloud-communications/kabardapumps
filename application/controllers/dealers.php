@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Dealers extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,22 +17,23 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	 function Welcome() {
+	 function Dealers() {
 	 	parent::__construct();
 		$this -> load -> database();
-	 	
+		
 	 }
 	 
 	public function index()
 	{
 		$this->lang->load('front');
-		$data['secondary_footer'] = true;
-		$data['footer_news'] = get_latestNewsItems(2);
+		$data['secondary_footer'] = true; 
+	 	
 		
-		$products = $this -> frontend_model -> get_homepage_products(1);
-		$data['products'] = $products;
-		
-		$this->load->view('index', $data);
+		$this->load->view('dealers', $data);
+	}
+	public function json(){
+		$locations = $this -> frontend_model -> get_dealers();
+		echo json_encode($locations);
 	}
 }
 

@@ -12,8 +12,8 @@
 			  				<h1>Build for endurance and the ease to adapt in difficult environments</h1>
 			  			</header>
 			  			<footer>
-			  				<a class="btn btn-sm btn-default" href="../../components/#navbar" role="button">Discover our product range</a>
-			  				<a class="btn btn-sm btn-default" href="../../components/#navbar" role="button">Let’s talk</a>
+			  				<a class="btn btn-sm btn-default" href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.products'); ?>" role="button">Discover our product range</a>
+			  				<a class="btn btn-sm btn-default" href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.contact'); ?>" role="button">Let’s talk</a>
 			  				
 			  			</footer>
 			  			
@@ -94,12 +94,12 @@ the SuperHawk range by Hidrostal offers market leading </p>
 			  					<h2>Screw Impeller Pumps</h2>
 			  			 	</header>
 			  			 	<ul class="list-unstyled rangeCollector">
-			  			 		<li class="active"><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
-			  			 		<li><a class="rangeSelector" href="#">100 – 4 Manual</a></li>
+			  			 		
+			  			 		<?php 
+			  			 			$i = 0;
+			  			 			foreach($products as $product){ ?>
+			  			 			<li <?php echo ($i == 0) ? 'class="active"': ''; ?>><a class="rangeSelector" href="#"><?php echo $product["name"] ?></a></li>
+			  			 		<?php $i++; } ?>
 			  			 		
 			  			 	</ul>
 				  			
@@ -111,49 +111,22 @@ the SuperHawk range by Hidrostal offers market leading </p>
 				  <div class="col-md-8">
 
 				  		 <div id="owl-demo" class="owl-carousel">
+				  		 	
+				  		 <?php foreach($products as $product){ ?>
+			  			 	<div class="item">
+		                		<header>
+			  						<h1><?php echo $product["name"] ?></h1>
+				  			 	</header>
+				  			 	<section class="textblock">
+									<p><?php echo $product["excerpt"] ?> 
+										<a href="/<?php echo $GLOBALS['language-abbr'] . "/" . lang('nav.item.url.products') . "/"?><?php echo $product["url"] ?>"><?php echo lang('g.readmore'); ?></a>
+									</p>
+									
+								</section>
+								<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
+		                	</div>
+			  			 <?php } ?>	
 
-		                <div class="item">
-		                	<header>
-			  					<h1>100 – 4 Manual</h1>
-			  			 	</header>
-			  			 	<section class="textblock">
-								<p>With fuel savings of up to £696 per week, 
-								the SuperHawk range by Hidrostal offers market leading 
-								<a href="">Read more</a>
-								</p>
-								
-							</section>
-							<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-		                	
-		                </div>
-		                <div class="item">
-		                	<header>
-			  					<h1>100 – 4 Manual</h1>
-			  			 	</header>
-			  			 	<section class="textblock">
-								<p>With fuel savings of up to £696 per week, 
-								the SuperHawk range by Hidrostal offers market leading 
-								<a href="">Read more</a>
-								</p>
-								
-							</section>
-							<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-		                </div>
-		                <div class="item">
-		                	<header>
-			  					<h1>100 – 4 Manual</h1>
-			  			 	</header>
-			  			 	<section class="textblock">
-								<p>With fuel savings of up to £696 per week, 
-								the SuperHawk range by Hidrostal offers market leading 
-								<a href="">Read more</a>
-								</p>
-								
-							</section>
-		                	<img src="/assets/images/home_pump.png" class="img-responsive" alt="pomp">
-		                	
-		                </div>
-		
 		              </div>
 				  	
 				  	
@@ -169,7 +142,7 @@ the SuperHawk range by Hidrostal offers market leading </p>
 		<section class="button block">
 			<div class="container">
 				<div class="row">
-				  <div class="col-md-12"><a class="btn btn-sm btn-default" href="#" role="button">Discover the complete product range</a></div>
+				  <div class="col-md-12"><a class="btn btn-sm btn-default" href="/<?php echo $GLOBALS['language-abbr'];?>/<?php echo lang('nav.item.url.products'); ?>" role="button">Discover the complete product range</a></div>
 				</div>
 			</div>
 		</section>

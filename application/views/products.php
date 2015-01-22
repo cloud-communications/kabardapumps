@@ -14,7 +14,16 @@
 			  			<div class="col-md-12">
 			  				<ul class="list-inline list-unstyled">
 			  					<li class="reset"><a href="">ALL PRODUCTS</a></li>
-			  					<li><a href="">ALL PRODUCTS</a></li>
+			  					<li>
+			  						<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-primary">
+    											<input type="radio" name="" id="option1" value="">SIP RANGE
+  											</label>
+  											<label class="btn btn-primary">
+    											<input type="radio" name="" id="option1" value="">SIP RANGE 2
+  											</label>
+  										</div>
+			  					</li>
 			  				</ul>
 			  				
 			  			</div>
@@ -58,7 +67,7 @@
 								</header>
 								<section class="textblock">
 									<p><?php echo $products["excerpt"] ?></p>
-									<a class="btn btn-sm btn-default" href="<?php echo $GLOBALS['language-abbr'] . "/" . lang('nav.item.url.products') . "/"?><?php echo $products["url"] ?>" role="button">Read more</a>
+									<a class="btn btn-sm btn-default" href="<?php echo $GLOBALS['language-abbr'] . "/" . lang('nav.item.url.products') . "/"?><?php echo $products["url"] ?>" role="button"><?php echo lang('g.readmore'); ?></a>
 								</section>
 				  			</article>
 						

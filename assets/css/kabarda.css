@@ -227,6 +227,67 @@ form .form-group label {
         .navbar .navbar-right #social-icons a:hover {
           background-color: #dedede; } }
 
+#dealers .bh-sl-container .loc-name {
+  font-weight: bold; }
+#dealers .bh-sl-container .bh-sl-map {
+  width: 100%;
+  height: 300px; }
+  @media (min-width: 768px) {
+    #dealers .bh-sl-container .bh-sl-map {
+      height: 530px; } }
+#dealers .bh-sl-container .bh-sl-loc-list .list-details header {
+  margin-bottom: 10px; }
+  #dealers .bh-sl-container .bh-sl-loc-list .list-details header h2 {
+    line-height: 22px;
+    margin: 0; }
+#dealers .bh-sl-container .bh-sl-loc-list ul li {
+  display: block;
+  clear: left;
+  float: left;
+  margin: 3% 4%;
+  padding-bottom: 15px;
+  cursor: pointer;
+  width: 92%;
+  border-bottom: 1px solid #dedede; }
+#dealers .bh-sl-container .bh-sl-loc-list ul li:hover, #dealers .bh-sl-container .bh-sl-loc-list ul li.list-focus {
+  background: #dedede; }
+#dealers .bh-sl-container .bh-sl-loc-list .list-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 3px;
+  width: 20px;
+  max-width: 25px;
+  text-align: center;
+  background: #dedede;
+  color: #303030;
+  font-weight: bold; }
+#dealers .bh-sl-container .bh-sl-loc-list .list-details .list-content {
+  padding: 0 10px; }
+  #dealers .bh-sl-container .bh-sl-loc-list .list-details .list-content .view {
+    color: #2980b9; }
+#dealers .bh-sl-container .bh-sl-loc-list .list-details {
+  float: left;
+  margin-left: 6px;
+  width: 65%; }
+#dealers .bh-sl-container .bh-sl-loc-list .list-logo {
+  float: left;
+  width: 30%;
+  max-width: 100px;
+  position: relative; }
+  #dealers .bh-sl-container .bh-sl-loc-list .list-logo img {
+    width: 100%; }
+#dealers .bh-sl-loc-list {
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%; }
+  @media (min-width: 768px) {
+    #dealers .bh-sl-loc-list {
+      width: 318px;
+      height: 530px;
+      position: absolute;
+      z-index: 2;
+      overflow: scroll; } }
+
 @font-face {
   font-family: 'Pe-icon-social';
   src: url("../fonts/Pe-icon-social.eot?-96eskg");
@@ -589,6 +650,48 @@ header .textblock.intro {
     padding-top: 40%;
     width: 0;
     float: left; }
+
+#dealers header {
+  margin-bottom: 25px; }
+  #dealers header .focus {
+    background-image: url("http://www2.shutterstock.com/webstack/img/lohp/hero/hero-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.05);
+    max-height: 280px; }
+  #dealers header .focus:before {
+    content: "";
+    display: block;
+    padding-top: 40%;
+    width: 0;
+    float: left; }
+
+#dealers section.dealers {
+  padding: 0;
+  margin-bottom: 25px; }
+#dealers .filter {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 5px;
+  color: #777;
+  text-decoration: none; }
+  #dealers .filter ul li {
+    padding-left: 30px; }
+  #dealers .filter ul li.reset {
+    border-right: 1px solid #dedede;
+    padding-right: 30px;
+    padding-left: 0; }
+  #dealers .filter a:hover, #dealers .filter .active > a, #dealers .filter .active > a:hover, #dealers .filter .active > a:focus {
+    color: #303030; }
+
+.filter .btn-primary {
+  border-color: #dedede;
+  color: #303030;
+  border-radius: 0px; }
+.filter .btn-primary.active {
+  background-color: #dedede; }
+.filter .btn.active {
+  box-shadow: none; }
 
 #products .filter {
   border-bottom: 1px solid #e7e7e7;

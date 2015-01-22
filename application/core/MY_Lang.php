@@ -30,7 +30,7 @@ class MY_Lang extends CI_Lang {
 
   // special URIs (not localized)
   private $special = array (
-    "admin"
+    "admin", "json-dealers"
   );
 
   // where to redirect if no language in URI

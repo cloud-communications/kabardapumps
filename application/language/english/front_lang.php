@@ -6,6 +6,8 @@ $lang['g.linkedIn'] = "http://www.facebook.com";
 $lang['g.youtube'] = "http://www.facebook.com";
 $lang['g.picasa'] = "http://www.facebook.com";
 
+$lang['g.readmore'] = "Read more";
+
 //main nav
 $lang['nav.toggle'] = "Toggle navigation";
 $lang['nav.item.home'] = "Home";

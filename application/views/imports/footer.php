@@ -50,7 +50,6 @@
 		 <script>
     $(document).ready(function() {
       $("#owl-demo").owlCarousel({
-
 	      navigation : true,
 	      navigationText : ["<img src='/assets/images/carrouse_prev.png' alt='Previous'>","<img src='/assets/images/carrouse_next.png' alt='Next'>"],
 	      slideSpeed : 300,
@@ -84,5 +83,53 @@
 	});
    
     </script>
+    <!-- STORELOCATOR -->
+    <script src="/assets/js/storelocator/handlebars-1.0.0.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
+    <script src="/assets/js/storelocator/jquery.storelocator.js"></script>
+		<script>
+		   google.maps.event.addDomListener(window, "load", initMap);
+		   function initMap(){
+				$('#map-container').storeLocator({
+					'dataType': 'json',
+					'dataLocation': '/json-dealers',
+					'slideMap' : false,
+					'defaultLoc': true,
+					'defaultLat': '51.104163',
+					'defaultLng' : '3.81',
+					'maxDistance': false,
+					'distanceAlert': 100000000,
+					'fullMapStart' : true,
+					'listColor2' : "#FFFFFF",
+					'taxonomyFilters' : {
+						'country' : 'country-filter'
+					},
+					'mapSettings'              : {
+						zoom     : 10,
+						mapTypeControl: false,
+					    zoomControlOptions: {
+					        position: google.maps.ControlPosition.RIGHT_CENTER
+					    },
+					    panControlOptions: {
+					        position: google.maps.ControlPosition.TOP_RIGHT
+					    },
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					},
+
+				});
+			};
+			
+			$(document).on("click", ".bh-sl-loc-list ul li", function() { 
+				var navHeight = $("#navbar").height();
+				$("html, body").animate({
+		        	scrollTop: $('.bh-sl-map').offset().top - 100
+		   		}, 200);
+
+			});
+			
+		</script>
+    
+    
 	</body>
 </html>
